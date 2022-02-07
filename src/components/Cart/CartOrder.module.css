@@ -1,0 +1,30 @@
+.cart-list {
+    list-style-type: none;
+}
+
+.total {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.checkout {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.order {
+    font-size: 1.2rem;
+    font-weight: 700;
+    border: none;
+    background-color: rgb(255, 168, 97);
+    border-radius: 20rem;
+    padding: 0.5rem 0.7rem;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.disable {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
