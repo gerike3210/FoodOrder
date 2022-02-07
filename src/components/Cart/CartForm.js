@@ -1,12 +1,12 @@
 import { useRef } from "react";
 import { useDispatch } from "react-redux";
 import { orderActions } from "../../store";
-import classes from "./AddToCart.module.css";
+import classes from "./CartForm.module.css";
 
-const AddToCart = ({ onOrderData }) => {
+const CartForm = ({ productsInfo }) => {
     const dispatch = useDispatch();
     const inputRef = useRef();
-    const { id, name, description, price } = onOrderData;
+    const { id, name, description, price } = productsInfo;
 
     const addToCartHandler = (event) => {
         const amount = Number.parseInt(inputRef.current.value);
@@ -39,9 +39,11 @@ const AddToCart = ({ onOrderData }) => {
                     ref={inputRef}
                 ></input>
             </div>
-            <button className={classes["addtocart-btn"]}>Add to Cart</button>
+            <button type="submit" className={classes["addtocart-btn"]}>
+                Add to Cart
+            </button>
         </form>
     );
 };
 
-export default AddToCart;
+export default CartForm;

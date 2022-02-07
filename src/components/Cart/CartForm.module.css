@@ -1,40 +1,35 @@
 .container-addtocart {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
 }
-
 .container-fields {
     display: flex;
     gap: 0.5rem;
     margin-bottom: 0.5rem;
 }
-
 .addtocart-label {
     display: inline-block;
     font-size: 1.2rem;
     font-weight: 600;
 }
-
 .addtocart-input {
     display: inline-block;
     width: 2rem;
 }
-
 .addtocart-btn {
+    background-color: rgb(235, 153, 86);
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
+    cursor: pointer;
     display: block;
     font-size: 0.9rem;
     font-weight: 700;
-    border: none;
-    border-radius: 1rem;
-    background-color: rgb(235, 153, 86);
-    box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
     margin: 0 auto;
     padding: 0.5rem;
-    cursor: pointer;
 }
-
 .addtocart-btn:hover {
     background-color: rgb(255, 187, 132);
     transition: all 0.3s;

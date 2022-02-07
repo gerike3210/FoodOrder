@@ -1,19 +1,16 @@
 .container {
     color: #fff;
-    width: 60%;
     margin: 0 auto;
+    width: 60%;
 }
-
 .title {
     font-size: 4rem;
-
     padding: 2rem;
 }
-
 .paragraph {
-    width: 50%;
-    font-size: 1.3rem;
     border: 0.1rem solid #fff;
-    padding: 1rem;
+    font-size: 1.3rem;
     margin: 0 auto;
+    padding: 1rem;
+    width: 50%;
 }

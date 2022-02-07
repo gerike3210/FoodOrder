@@ -1,8 +1,8 @@
 import { useDispatch } from "react-redux";
 import { orderActions } from "../../store";
-import classes from "./CartItem.module.css";
+import classes from "./CartOrderItem.module.css";
 
-const CartItem = ({ id, name, amount, price }) => {
+const CartOrderItem = ({ id, name, amount, price }) => {
     const dispatch = useDispatch();
 
     const increaseHandler = () => {
@@ -13,12 +13,14 @@ const CartItem = ({ id, name, amount, price }) => {
         dispatch(orderActions.decrease(id));
     };
 
+    const totalPricePerItem = (price * amount).toFixed(2);
+
     return (
         <li className={classes.item}>
             <div className={classes.text}>
                 <h3 className={classes.name}>{name}</h3>
                 <p className={classes.amount}>{amount}</p>
-                <p className={classes.price}>${(price * amount).toFixed(2)}</p>
+                <p className={classes.price}>{totalPricePerItem}</p>
             </div>
             <div className={classes.actions}>
                 <button onClick={increaseHandler}>+</button>
@@ -28,4 +30,4 @@ const CartItem = ({ id, name, amount, price }) => {
     );
 };
 
-export default CartItem;
+export default CartOrderItem;

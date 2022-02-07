@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import CartItem from "./CartItem";
+import CartOrderItem from "./CartOrderItem";
 import Modal from "../UI/Modal";
 
 import classes from "./CartOrder.module.css";
@@ -11,13 +11,11 @@ const CartOrder = ({ onClose }) => {
         return prev + item.price * item.amount;
     }, 0);
 
-    const emptyCartClasses = totalPrice === 0 ? "disable" : "";
-
     return (
         <Modal onClose={onClose}>
             <ul className={classes["cart-list"]}>
                 {orders.map((item) => (
-                    <CartItem
+                    <CartOrderItem
                         key={item.id}
                         id={item.id}
                         name={item.name}
@@ -30,9 +28,7 @@ const CartOrder = ({ onClose }) => {
                 <h2 className={classes.total}>
                     Total: ${totalPrice.toFixed(2)}
                 </h2>
-                <button
-                    className={`${classes.order} ${classes[emptyCartClasses]}`}
-                >
+                <button className={classes.order} disabled={!totalPrice}>
                     Order
                 </button>
             </div>

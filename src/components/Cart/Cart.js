@@ -4,7 +4,7 @@ import classes from "./Cart.module.css";
 import CartOrder from "./CartOrder";
 
 const Cart = () => {
-    const [showModal, setShowModal] = useState(false);
+    const [isModal, setIsModal] = useState(false);
 
     const orders = useSelector((state) => state.orders);
 
@@ -13,11 +13,11 @@ const Cart = () => {
     }, 0);
 
     const openModalHandler = () => {
-        setShowModal(true);
+        setIsModal(true);
     };
 
     const closeModalHandler = () => {
-        setShowModal(false);
+        setIsModal(false);
     };
 
     return (
@@ -44,7 +44,7 @@ const Cart = () => {
                     </span>
                 </div>
             </button>
-            {showModal && <CartOrder onClose={closeModalHandler} />}
+            {isModal && <CartOrder onClose={closeModalHandler} />}
         </>
     );
 };

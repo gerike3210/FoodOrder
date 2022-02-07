@@ -1,34 +1,28 @@
 .cart {
-    width: 12rem;
     background-color: rgb(94, 42, 29);
-    border: none;
     border-radius: 50rem;
-    padding: 0.3rem;
-
+    border: none;
     cursor: pointer;
+    padding: 0.3rem;
+    width: 12rem;
 }
-
 .cart-container {
+    align-items: center;
     color: #fff;
+    display: flex;
     font-size: 0.9rem;
     font-weight: 700;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 0.6rem;
+    justify-content: center;
 }
-
 .cart-icon {
-    width: 1.4rem;
     display: inline-block;
     stroke: #fff;
+    width: 1.4rem;
 }
-
 .cart-text {
     display: inline-block;
 }
-
 .cart-amount {
     background-color: rgb(165, 67, 37);
     border-radius: 50%;

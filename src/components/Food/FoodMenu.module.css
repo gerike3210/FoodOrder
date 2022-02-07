@@ -1,9 +1,8 @@
 .container-menu {
-    width: 50%;
     margin: 0 auto;
     padding-top: 7rem;
+    width: 50%;
 }
-
 .menu-items {
     padding: 3rem;
 }

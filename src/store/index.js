@@ -1,36 +1,38 @@
-import { createSlice, configureStore, current } from "@reduxjs/toolkit";
+import { createSlice, configureStore } from "@reduxjs/toolkit";
+
+const initialState = {
+    menu: [
+        {
+            id: "m1",
+            name: "Pizza",
+            description: "Speciality from Italy",
+            price: "12.99",
+        },
+        {
+            id: "m2",
+            name: "Hamburger",
+            description: " Speciality from USA",
+            price: "14.99",
+        },
+        {
+            id: "m3",
+            name: "Sushi",
+            description: "Speciality from Japan",
+            price: "22.99",
+        },
+        {
+            id: "m4",
+            name: "Gulyas Soup",
+            description: "Speciality from Hungary",
+            price: "10.99",
+        },
+    ],
+    orders: [],
+};
 
 const orderSlice = createSlice({
     name: "order",
-    initialState: {
-        menu: [
-            {
-                id: "m1",
-                name: "Pizza",
-                description: "Speciality from Italy",
-                price: "12.99",
-            },
-            {
-                id: "m2",
-                name: "Hamburger",
-                description: " Speciality from USA",
-                price: "14.99",
-            },
-            {
-                id: "m3",
-                name: "Sushi",
-                description: "Speciality from Japan",
-                price: "22.99",
-            },
-            {
-                id: "m4",
-                name: "Gulyas Soup",
-                description: "Speciality from Hungary",
-                price: "10.99",
-            },
-        ],
-        orders: [],
-    },
+    initialState: initialState,
     reducers: {
         addToCart(state, action) {
             const existingItem = state.orders.find(

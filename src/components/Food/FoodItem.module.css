@@ -1,31 +1,26 @@
 .container-item {
+    align-items: center;
+    border-bottom: 0.2rem solid rgb(235, 153, 86);
+    display: flex;
+    justify-content: space-between;
     list-style-type: none;
     margin-bottom: 1rem;
     padding-bottom: 1rem;
-    border-bottom: 0.2rem solid rgb(235, 153, 86);
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
-
 .container-item:last-child {
     border: none;
     margin-bottom: none;
     padding-bottom: none;
 }
-
 .name {
     font-size: 2rem;
     margin-bottom: 0.5rem;
 }
-
 .description {
     font-size: 1rem;
     font-style: italic;
     margin-bottom: 0.4rem;
 }
-
 .price {
     font-size: 1.5rem;
 }

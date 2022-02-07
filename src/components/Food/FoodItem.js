@@ -1,4 +1,4 @@
-import AddToCart from "../Cart/AddToCart";
+import CartForm from "../Cart/CartForm";
 import classes from "./FoodItem.module.css";
 
 const FoodItem = ({ id, name, description, price }) => {
@@ -9,8 +9,8 @@ const FoodItem = ({ id, name, description, price }) => {
                 <p className={classes.description}>{description}</p>
                 <p className={classes.price}>${price}</p>
             </div>
-            <AddToCart
-                onOrderData={{ id, name, description, price }}
+            <CartForm
+                productsInfo={{ id, name, description, price }}
                 className={classes["addtocart"]}
             />
         </li>

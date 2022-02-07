@@ -1,6 +1,6 @@
-import classes from "./FoodWelcome.module.css";
+import classes from "./WelcomeMessage.module.css";
 
-const FoodWelcome = () => {
+const WelcomeMessage = () => {
     return (
         <div className={classes.container}>
             <h1 className={classes.title}>
@@ -15,4 +15,4 @@ const FoodWelcome = () => {
     );
 };
 
-export default FoodWelcome;
+export default WelcomeMessage;

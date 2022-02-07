@@ -1,8 +1,7 @@
 import Cart from "../Cart/Cart";
-import CartModal from "../Cart/CartOrder";
 import classes from "./Food.module.css";
 import FoodMenu from "./FoodMenu";
-import FoodWelcome from "./FoodWelcome";
+import WelcomeMessage from "./WelcomeMessage";
 
 const Food = () => {
     return (
@@ -13,7 +12,7 @@ const Food = () => {
                     <Cart />
                 </nav>
                 <section className={classes["container-welcome"]}>
-                    <FoodWelcome />
+                    <WelcomeMessage />
                 </section>
                 <section className={classes["menu"]}>
                     <FoodMenu />
