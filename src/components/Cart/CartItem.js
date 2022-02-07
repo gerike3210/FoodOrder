@@ -18,7 +18,7 @@ const CartItem = ({ id, name, amount, price }) => {
             <div className={classes.text}>
                 <h3 className={classes.name}>{name}</h3>
                 <p className={classes.amount}>{amount}</p>
-                <p className={classes.price}>{(price * amount).toFixed(2)}</p>
+                <p className={classes.price}>${(price * amount).toFixed(2)}</p>
             </div>
             <div className={classes.actions}>
                 <button onClick={increaseHandler}>+</button>

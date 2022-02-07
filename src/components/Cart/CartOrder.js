@@ -28,7 +28,7 @@ const CartOrder = ({ onClose }) => {
             </ul>
             <div className={classes.checkout}>
                 <h2 className={classes.total}>
-                    Total: {totalPrice.toFixed(2)}
+                    Total: ${totalPrice.toFixed(2)}
                 </h2>
                 <button
                     className={`${classes.order} ${classes[emptyCartClasses]}`}
