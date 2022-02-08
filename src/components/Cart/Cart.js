@@ -1,16 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+import Modal from "../UI/Modal";
 import classes from "./Cart.module.css";
 import CartOrder from "./CartOrder";
 
 const Cart = () => {
     const [isModal, setIsModal] = useState(false);
 
-    const orders = useSelector((state) => state.orders);
-
-    const totalAmount = orders.reduce((prev, item) => {
-        return prev + item.amount;
-    }, 0);
+    const orders = useSelector((state) => state.order.orders);
+    const totalAmount =
+        orders.reduce((prev, item) => {
+            return prev + item.amount;
+        }, 0) || 0;
 
     const openModalHandler = () => {
         setIsModal(true);

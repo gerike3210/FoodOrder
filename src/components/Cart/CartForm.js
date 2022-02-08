@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { useDispatch } from "react-redux";
-import { orderActions } from "../../store";
+import { orderActions } from "../../store/order-slice";
 import classes from "./CartForm.module.css";
 
 const CartForm = ({ productsInfo }) => {

@@ -5,7 +5,7 @@ import Modal from "../UI/Modal";
 import classes from "./CartOrder.module.css";
 
 const CartOrder = ({ onClose }) => {
-    const orders = useSelector((state) => state.orders);
+    const orders = useSelector((state) => state.order.orders);
 
     const totalPrice = orders.reduce((prev, item) => {
         return prev + item.price * item.amount;

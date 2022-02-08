@@ -4,7 +4,32 @@ import FoodItem from "./FoodItem";
 import classes from "./FoodMenu.module.css";
 
 const FoodMenu = () => {
-    const menu = useSelector((state) => state.menu);
+    const menu = [
+        {
+            id: "m1",
+            name: "Pizza",
+            description: "Speciality from Italy",
+            price: "12.99",
+        },
+        {
+            id: "m2",
+            name: "Hamburger",
+            description: " Speciality from USA",
+            price: "14.99",
+        },
+        {
+            id: "m3",
+            name: "Sushi",
+            description: "Speciality from Japan",
+            price: "22.99",
+        },
+        {
+            id: "m4",
+            name: "Gulyas Soup",
+            description: "Speciality from Hungary",
+            price: "10.99",
+        },
+    ];
 
     return (
         <div className={classes["container-menu"]}>
